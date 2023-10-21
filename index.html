@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Management</title>
+</head>
+<body>
+
+<div id="loginScreen">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label for="login_id">Email:</label>
+    <input type="text" id="login_id" required placeholder = "login id">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required placeholder="password">
+    <br>
+    <button type="button" onclick="authenticate()">Login</button>
+  </form>
+</div>
+
+<div id="customerListScreen" style="display: none;">
+  <h2>Customer List</h2>
+  <table id="customerTable">
+    
+  </table>
+  <button type="button" onclick="showCreateUpdateScreen('create')">Add Customer</button>
+  <button type="button" onclick="logout()">Logout</button>
+</div>
+
+<div id="createUpdateScreen" style="display: none;">
+  <h2 id="formTitle">Create Customer</h2>
+  <form id="customerForm">
+    
+    <button type="button" onclick="saveCustomer()">Save</button>
+    <button type="button" onclick="cancel()">Cancel</button>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
